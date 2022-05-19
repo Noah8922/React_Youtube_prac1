@@ -23,4 +23,4 @@ const VideoItem = ({ video, video: { snippet }, onVideoClick, display }) => {
   );
 };
 
-export default VideoItem;
+export default React.memo(VideoItem);
