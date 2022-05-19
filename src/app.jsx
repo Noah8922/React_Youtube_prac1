@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import styles from "./app.module.css";
 import SearchBar from "./components/search_bar/search_bar";
 import VideoDetail from "./components/video_detail/video_detail";
@@ -19,14 +19,14 @@ function App({ youtube }) {
     setSelectedVideo(video);
   };
 
-  const search = (query) => {
+  const search = useCallback((query) => {
     youtube
       .search(query) // 가독성 GOOOD ^^b
       .then((videos) => {
         setVideos(videos);
         setSelectedVideo(null);
       });
-  };
+  }, []);
 
   useEffect(() => {
     youtube
