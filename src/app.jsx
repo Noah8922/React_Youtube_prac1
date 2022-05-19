@@ -22,7 +22,10 @@ function App({ youtube }) {
   const search = (query) => {
     youtube
       .search(query) // 가독성 GOOOD ^^b
-      .then((videos) => setVideos(videos));
+      .then((videos) => {
+        setVideos(videos);
+        setSelectedVideo(null);
+      });
   };
 
   useEffect(() => {
