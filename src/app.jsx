@@ -3,41 +3,28 @@ import styles from "./app.module.css";
 import SearchBar from "./components/search_bar/search_bar";
 import VideoList from "./components/video_list/video_list";
 
-function App() {
+function App({ youtube }) {
   const [videos, setVideos] = useState([]);
 
-  const search = (query) => {
-    var requestOptions = {
-      method: "GET",
-      redirect: "follow",
-    };
+  /** 주의
+   * 여기서 Youtube 클래스를 만드는 경우가 있다.
+   * const youtube = new Youtube() <- 여기에는 두가지 문제가 있는데
+   * 1. App이라는 함수를 호출 할 때마다 새로운 youtube라는 오브젝트를 만든다는 점
+   * 2. 나중에 mock class를 제공하기 어렵다. (유닛테스트에도 네트워크 통신을 할 것이다. )
+   */
 
-    fetch(
-      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=${query}&type=video&key=AIzaSyBPFfo6CusHteOMipoJgHKK0VYbicES7qE`,
-      requestOptions
-    )
-      .then((response) => response.json())
-      .then((result) =>
-        result.items.map((item) => ({ ...item, id: item.id.videoId }))
-      )
-      .then((items) => setVideos(items))
-      .catch((error) => console.log("error", error));
+  const search = (query) => {
+    youtube
+      .search(query) // 가독성 GOOOD ^^b
+      .then((videos) => setVideos(videos));
   };
 
   useEffect(() => {
-    const requestOptions = {
-      method: "GET",
-      redirect: "follow",
-    };
-
-    fetch(
-      "https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=25&key=AIzaSyBPFfo6CusHteOMipoJgHKK0VYbicES7qE",
-      requestOptions
-    )
-      .then((response) => response.json()) // 원래는 text인데 작업하기엔 json이 편함.
-      .then((result) => setVideos(result.items))
-      .catch((error) => console.log("error", error));
+    youtube
+      .mostPopular() //
+      .then((videos) => setVideos(videos));
   }, []);
+
   return (
     <div className={styles.app}>
       <SearchBar onSearch={search} />
