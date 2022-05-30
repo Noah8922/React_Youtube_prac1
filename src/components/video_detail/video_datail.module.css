@@ -1,7 +1,17 @@
 .detail {
     padding: 0.2em;
+    color: white;
+}
+
+.detail.dark {
+    color: white;
+}
+
+.detail.light {
+    color: black;
 }
 
 .description {
     white-space: pre-wrap;
+    color: white;
 }
