@@ -59,7 +59,10 @@ function App({ youtube }) {
       <section className={styles.content}>
         {selectedVideo && (
           <div className={styles.detail}>
-            <VideoDetail video={selectedVideo} />
+            <VideoDetail
+              video={selectedVideo}
+              background={mode === "dark" ? "white" : "black"}
+            />
           </div>
         )}
         <div className={styles.list}>
