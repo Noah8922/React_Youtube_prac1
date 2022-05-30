@@ -1,5 +1,15 @@
 .app {
-    max-width: 80rem;
+    max-width: 100%;
+    padding-top: 3.5em;
+    
+}
+
+.app.dark {
+    background-color: black;
+}
+
+.app.light {
+    background-color: white;
 }
 
 .content {
