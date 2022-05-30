@@ -7,6 +7,8 @@ import VideoList from "./components/video_list/video_list";
 function App({ youtube }) {
   const [videos, setVideos] = useState([]);
   const [selectedVideo, setSelectedVideo] = useState(null);
+  const [mode, setMode] = useState("dark");
+  const modeType = mode === "dark" ? styles.dark : styles.light;
 
   /** 주의
    * 여기서 Youtube 클래스를 만드는 경우가 있다.
@@ -28,6 +30,19 @@ function App({ youtube }) {
       });
   }, []);
 
+  const popular = () => {
+    youtube
+      .mostPopular() //
+      .then((videos) => {
+        setVideos(videos);
+        setSelectedVideo(null);
+      });
+  };
+
+  const changeBackground = () => {
+    mode === "dark" ? setMode("light") : setMode("dark");
+  };
+
   useEffect(() => {
     youtube
       .mostPopular() //
@@ -35,8 +50,12 @@ function App({ youtube }) {
   }, []);
 
   return (
-    <div className={styles.app}>
-      <SearchBar onSearch={search} />
+    <div className={`${styles.app} ${modeType}`}>
+      <SearchBar
+        onSearch={search}
+        onPopular={popular}
+        onchangeBG={changeBackground}
+      />
       <section className={styles.content}>
         {selectedVideo && (
           <div className={styles.detail}>
@@ -48,6 +67,7 @@ function App({ youtube }) {
             videos={videos}
             onVideoClick={selectVideo}
             display={selectedVideo ? "list" : "grid"}
+            background={mode === "dark" ? "white" : "black"}
           />
         </div>
       </section>
