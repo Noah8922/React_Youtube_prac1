@@ -10,7 +10,7 @@
 
 ## 💡 구현기능
 
-### 현재 가장 유행하는 영상 25개 받아오기
+### 현재 TOP 25 영상 받아오기
 
 - Youtube API를 통해 영상 받아오기
 
@@ -24,8 +24,11 @@
 
 ### 💚 구현영상
 
-- 회원가입 ~ 로그인 영상 <br>
-  ![벨로그클론_회원가입_로그인](https://user-images.githubusercontent.com/93845398/162627282-7f6658f6-b619-4e42-914f-e68f85ca1683.gif)
+- Top25 영상 받아오기 <br>
+  ![Top25](https://user-images.githubusercontent.com/98517680/171082210-e459d4c1-0451-42f9-bac1-1f1fd1d5f15e.gif)
 
-- 메인 화면 ~ 게시글 영상 <br>
-  ![벨로그클론_메인_게시글작성](https://user-images.githubusercontent.com/93845398/162627301-7e6ed7bc-99aa-48dd-853a-abed5892a656.gif)
+- 검색 기능 <br>
+  ![Search](https://user-images.githubusercontent.com/98517680/171082275-8f8436cc-0407-4dcb-b4fc-645c332923de.gif)
+
+- 다크모드 전환 <br>
+  ![Dark](https://user-images.githubusercontent.com/98517680/171082334-8a7243f0-d72e-497b-afc7-2051d85c6236.gif)
