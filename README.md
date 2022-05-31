@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+<a href="https://velog.io/"><img src="https://lh3.googleusercontent.com/3zkP2SYe7yYoKKe47bsNe44yTgb4Ukh__rBbwXwgkjNRe4PykGG409ozBxzxkrubV7zHKjfxq6y9ShogWtMBMPyB3jiNps91LoNH8A=s500"></a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 클론코딩🌱youtube
 
-## Available Scripts
+동영상 공유 플랫폼 Youtube 클론 코딩
 
-In the project directory, you can run:
+## 📆 작업기간
 
-### `yarn start`
+<strong>2022.05.06 ~ 2022.05.24</strong>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 💡 구현기능
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 현재 가장 유행하는 영상 25개 받아오기
 
-### `yarn test`
+- Youtube API를 통해 영상 받아오기
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 원하는 영상 검색 가능
 
-### `yarn build`
+- 시청을 원하는 영상을 검색하여 받아오기
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 다크모드
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- 다크모드 및 일반 모드 선택 가능
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 💚 구현영상
 
-### `yarn eject`
+- 회원가입 ~ 로그인 영상 <br>
+  ![벨로그클론_회원가입_로그인](https://user-images.githubusercontent.com/93845398/162627282-7f6658f6-b619-4e42-914f-e68f85ca1683.gif)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- 메인 화면 ~ 게시글 영상 <br>
+  ![벨로그클론_메인_게시글작성](https://user-images.githubusercontent.com/93845398/162627301-7e6ed7bc-99aa-48dd-853a-abed5892a656.gif)
